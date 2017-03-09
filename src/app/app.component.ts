@@ -12,10 +12,21 @@ export class Contact {
     template: `
         <h1>{{title}}</h1>
         <h2>{{contact.firstName}} details:</h2>
-        <div><label>id: </label>{{contact.id}}</div>
-        <div><label>first name: </label>{{contact.firstName}}</div>
-        <div><label>last name: </label>{{contact.lastName}}</div>
-        <div><label>phone: </label>{{contact.phone}}</div>
+        <div>
+            <label>id: </label>{{contact.id}}
+        </div>
+        <div>
+            <label>first name: </label>
+            <input value="{{contact.firstName}}" placeholder="first name">
+        </div>
+        <div>
+            <label>last name: </label>
+            <input value="{{contact.lastName}}" placeholder="last name">
+        </div>
+        <div>
+            <label>phone: </label>
+            <input value="{{contact.phone}}" placeholder="phone">
+        </div>
         `,
 })
 export class AppComponent {
