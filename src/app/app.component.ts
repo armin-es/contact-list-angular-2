@@ -11,7 +11,11 @@ export class Contact {
     selector: 'my-app',
     template: `
         <h1>{{title}}</h1>
-        <h2>{{contact.firstName}} details!</h2>
+        <h2>{{contact.firstName}} details:</h2>
+        <div><label>id: </label>{{contact.id}}</div>
+        <div><label>first name: </label>{{contact.firstName}}</div>
+        <div><label>last name: </label>{{contact.lastName}}</div>
+        <div><label>phone: </label>{{contact.phone}}</div>
         `,
 })
 export class AppComponent {
