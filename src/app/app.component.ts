@@ -17,7 +17,7 @@ export class Contact {
         </div>
         <div>
             <label>first name: </label>
-            <input value="{{contact.firstName}}" placeholder="first name">
+            <input [(ngModel)]="contact.firstName" placeholder="first name">
         </div>
         <div>
             <label>last name: </label>
