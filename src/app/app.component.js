@@ -9,15 +9,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var Contact = (function () {
+    function Contact() {
+    }
+    return Contact;
+}());
+exports.Contact = Contact;
 var AppComponent = (function () {
     function AppComponent() {
         this.title = 'Contact List';
-        this.contact = 'Armin Eslami';
+        this.contact = {
+            id: 1,
+            firstName: 'Armin',
+            lastName: 'Eslami',
+            phone: 6132779911,
+        };
     }
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: "\n        <h1>{{title}}</h1>\n        <h2>{{contact}} details!</h2>\n        ",
+            template: "\n        <h1>{{title}}</h1>\n        <h2>{{contact.firstName}} details!</h2>\n        ",
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
