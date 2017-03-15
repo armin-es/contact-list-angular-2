@@ -40,7 +40,7 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: "\n        <h1>{{title}}</h1>\n        <h2>{{contact.firstName}} details:</h2>\n        <div>\n            <label>id: </label>{{contact.id}}\n        </div>\n        <div>\n            <label>first name: </label>\n            <input [(ngModel)]=\"contact.firstName\" placeholder=\"first name\">\n        </div>\n        <div>\n            <label>last name: </label>\n            <input value=\"{{contact.lastName}}\" placeholder=\"last name\">\n        </div>\n        <div>\n            <label>phone: </label>\n            <input value=\"{{contact.phone}}\" placeholder=\"phone\">\n        </div>\n        ",
+            template: "\n        <h1>{{title}}</h1>\n        <h2>My Contacts:</h2>\n        <ul>\n            <li>\n                <!-- each contact goes here -->\n            </li>\n        </ul>\n        <h2>{{contact.firstName}} details:</h2>\n        <div>\n            <label>id: </label>{{contact.id}}\n        </div>\n        <div>\n            <label>first name: </label>\n            <input [(ngModel)]=\"contact.firstName\" placeholder=\"first name\">\n        </div>\n        <div>\n            <label>last name: </label>\n            <input value=\"{{contact.lastName}}\" placeholder=\"last name\">\n        </div>\n        <div>\n            <label>phone: </label>\n            <input value=\"{{contact.phone}}\" placeholder=\"phone\">\n        </div>\n        ",
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);

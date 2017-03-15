@@ -25,6 +25,12 @@ const CONTACTS: Contact[] = [
     selector: 'my-app',
     template: `
         <h1>{{title}}</h1>
+        <h2>My Contacts:</h2>
+        <ul>
+            <li>
+                <!-- each contact goes here -->
+            </li>
+        </ul>
         <h2>{{contact.firstName}} details:</h2>
         <div>
             <label>id: </label>{{contact.id}}
