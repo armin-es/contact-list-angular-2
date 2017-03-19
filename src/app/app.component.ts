@@ -9,7 +9,7 @@ export class Contact {
 
 const CONTACTS: Contact[] = [
     { id: 1, firstName: 'Armin', lastName: 'Eslami', phone: 6132779911 },
-    { id: 2, firstName: 'Miroslav', lastName: 'Pellegrino', phone: 4165550191 },
+    { id: 2, firstName: 'Mike', lastName: 'Pellegrino', phone: 4165550191 },
     { id: 3, firstName: 'Rika', lastName: 'Erckens', phone: 4165550130 },
     { id: 4, firstName: 'Luciana', lastName: 'Teke', phone: 7805550119 },
     { id: 5, firstName: 'Nichola', lastName: 'Choudhary', phone: 7805550137 },
@@ -23,30 +23,65 @@ const CONTACTS: Contact[] = [
 @Component({
     selector: 'my-app',
     template: `
-        <h1>{{title}}</h1>
+        <h1 class="title">{{title}}</h1>
         <h2>My Contacts:</h2>
-        <ul>
+        <ul class="contacts">
             <li *ngFor="let contact of contacts">
-                <span>{{contact.id}}</span> {{contact.firstName}}
+                <span class="badge">{{contact.id}}</span> {{contact.firstName}}
             </li>
         </ul>
-        <!-- <h2>{{contact.firstName}} details:</h2>
-        <div>
-            <label>id: </label>{{contact.id}}
-        </div>
-        <div>
-            <label>first name: </label>
-            <input [(ngModel)]="contact.firstName" placeholder="first name">
-        </div>
-        <div>
-            <label>last name: </label>
-            <input value="{{contact.lastName}}" placeholder="last name">
-        </div>
-        <div>
-            <label>phone: </label>
-            <input value="{{contact.phone}}" placeholder="phone">
-        </div> -->
-        `
+        `,
+    styles: [`
+        .title {
+            color: #555;
+        }
+        .selected {
+            background-color: #CFD8DC !important;
+            color: white;
+        }
+        .contacts {
+            margin: 0 0 2em 0;
+            list-style-type: none;
+            padding: 0;
+            width: 15em;
+        }
+        .contacts li {
+            cursor: pointer;
+            position: relative;
+            left: 0;
+            background-color: #EEE;
+            margin: .5em;
+            padding: .3em 0;
+            height: 1.6em;
+            font-family: sans-serif;
+        }
+        .contacts li.selected:hover {
+            background-color: #BBD8DC !important;
+            color: white;
+        }
+        .contacts li:hover {
+            color: #607D8B;
+            background-color: #DDD;
+            left: .1em;
+        }
+        .contacts .text {
+            position: relative;
+            top: -3px;
+        }
+        .contacts .badge {
+            display: inline-block;
+            font-size: small;
+            color: white;
+            padding: 0.8em 0.7em 0 0.7em;
+            background-color: #666;
+            line-height: 1em;
+            position: relative;
+            left: -1px;
+            top: -4px;
+            height: 1.8em;
+            margin-right: .8em;
+        }
+    `]
 })
 export class AppComponent {
     title = 'Contact List';
