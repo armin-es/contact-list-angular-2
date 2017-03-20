@@ -31,7 +31,7 @@ const CONTACTS: Contact[] = [
             </li>
         </ul>
 
-        <div *ngIf="selectedHero">
+        <div *ngIf="selectedContact">
             <h2>{{selectedContact.firstName}} details:</h2>
             <div>
                 <label>id: </label>{{selectedContact.id}}
