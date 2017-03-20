@@ -26,7 +26,9 @@ const CONTACTS: Contact[] = [
         <h1 class="title">{{title}}</h1>
         <h2>My Contacts:</h2>
         <ul class="contacts">
-            <li *ngFor="let contact of contacts" (click)="onSelect(contact)">
+            <li *ngFor="let contact of contacts"
+            [class.selected]="contact === selectedContact"
+            (click)="onSelect(contact)">
                 <span class="badge">{{contact.id}}</span> {{contact.firstName}}
             </li>
         </ul>
@@ -55,7 +57,7 @@ const CONTACTS: Contact[] = [
             color: #555;
         }
         .selected {
-            background-color: #CFD8DC !important;
+            background-color: #888 !important;
             color: white;
         }
         .contacts {
@@ -75,11 +77,11 @@ const CONTACTS: Contact[] = [
             font-family: sans-serif;
         }
         .contacts li.selected:hover {
-            background-color: #BBD8DC !important;
+            background-color: #aaa !important;
             color: white;
         }
         .contacts li:hover {
-            color: #607D8B;
+            color: #555;
             background-color: #DDD;
             left: .1em;
         }
