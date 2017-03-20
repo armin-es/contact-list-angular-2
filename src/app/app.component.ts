@@ -26,10 +26,29 @@ const CONTACTS: Contact[] = [
         <h1 class="title">{{title}}</h1>
         <h2>My Contacts:</h2>
         <ul class="contacts">
-            <li *ngFor="let contact of contacts">
+            <li *ngFor="let contact of contacts" (click)="onSelect(contact)">
                 <span class="badge">{{contact.id}}</span> {{contact.firstName}}
             </li>
         </ul>
+
+        <div *ngIf="selectedHero">
+            <h2>{{selectedContact.firstName}} details:</h2>
+            <div>
+                <label>id: </label>{{selectedContact.id}}
+            </div>
+            <div>
+                <label>first name: </label>
+                <input [(ngModel)]="selectedContact.firstName" placeholder="first name">
+            </div>
+            <div>
+                <label>last name: </label>
+                <input value="{{selectedContact.lastName}}" placeholder="last name">
+            </div>
+            <div>
+                <label>phone: </label>
+                <input value="{{selectedContact.phone}}" placeholder="phone">
+            </div>
+        </div>
         `,
     styles: [`
         .title {
@@ -86,4 +105,8 @@ const CONTACTS: Contact[] = [
 export class AppComponent {
     title = 'Contact List';
     contacts = CONTACTS;
+    selectedContact: Contact;
+    onSelect(contact: Contact): void {
+        this.selectedContact = contact;
+    }
 }
