@@ -1,5 +1,7 @@
 import { Component, Input } from '@angular/core';
 
+import { Contact } from './contact';
+
 @Component({
     selector: 'my-contact-detail',
 
@@ -26,5 +28,5 @@ import { Component, Input } from '@angular/core';
 })
 
 export class ContactDetailComponent {
-
+    contact: Contact;
 }

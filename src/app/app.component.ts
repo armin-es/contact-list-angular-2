@@ -1,11 +1,7 @@
 import { Component } from '@angular/core';
 
-export class Contact {
-    id: number;
-    firstName: string;
-    lastName: string;
-    phone: number;
-    }
+import { Contact } from './contact';
+
 
 const CONTACTS: Contact[] = [
     { id: 1, firstName: 'Armin', lastName: 'Eslami', phone: 6132779911 },
