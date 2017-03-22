@@ -22,6 +22,7 @@ import { Component, Input } from '@angular/core';
                 <input value="{{selectedContact.phone}}" placeholder="phone">
             </div>
         </div>
+    `
 })
 
 export class ContactDetailComponent {
