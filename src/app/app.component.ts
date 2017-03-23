@@ -28,6 +28,8 @@ const CONTACTS: Contact[] = [
                 <span class="badge">{{contact.id}}</span> {{contact.firstName}}
             </li>
         </ul>
+
+        <my-contact-detail [contact]="selectedContact"></my-contact-detail>
         `,
     styles: [`
         .title {
