@@ -28,5 +28,6 @@ import { Contact } from './contact';
 })
 
 export class ContactDetailComponent {
+    @Input()
     contact: Contact;
 }
