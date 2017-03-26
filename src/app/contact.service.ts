@@ -4,7 +4,7 @@ import { Contact } from './contact';
 import { CONTACTS } from './mock-contacts';
 
 @Injectable()
-export class contactSerivce {
+export class ContactService {
     getContacts(): Contact[] {
         return CONTACTS;
     }
