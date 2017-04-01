@@ -1,6 +1,6 @@
 import { Contact } from './contact';
 
-const CONTACTS: Contact[] = [
+export const CONTACTS: Contact[] = [
     { id: 1, firstName: 'Armin', lastName: 'Eslami', phone: 6132779911 },
     { id: 2, firstName: 'Mike', lastName: 'Pellegrino', phone: 4165550191 },
     { id: 3, firstName: 'Rika', lastName: 'Erckens', phone: 4165550130 },
