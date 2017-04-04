@@ -18,6 +18,9 @@ var AppComponent = (function () {
     AppComponent.prototype.getContacts = function () {
         this.contacts = this.contactService.getContacts();
     };
+    AppComponent.prototype.ngOnInit = function () {
+        this.getContacts();
+    };
     AppComponent.prototype.onSelect = function (contact) {
         this.selectedContact = contact;
     };
