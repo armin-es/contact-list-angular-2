@@ -76,6 +76,10 @@ export class AppComponent {
 
     constructor(private contactService: ContactService) {}
 
+    getContacts(): void {
+        this.contacts = this.contactService.getContacts();
+    }
+
     title = 'Contact List';
     contacts: Contact[];
     selectedContact: Contact;

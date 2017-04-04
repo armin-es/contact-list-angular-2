@@ -15,6 +15,9 @@ var AppComponent = (function () {
         this.contactService = contactService;
         this.title = 'Contact List';
     }
+    AppComponent.prototype.getContacts = function () {
+        this.contacts = this.contactService.getContacts();
+    };
     AppComponent.prototype.onSelect = function (contact) {
         this.selectedContact = contact;
     };
