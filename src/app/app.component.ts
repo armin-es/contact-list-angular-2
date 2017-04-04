@@ -69,9 +69,13 @@ import { ContactService } from './contact.service';
             height: 1.8em;
             margin-right: .8em;
         }
-    `]
+    `],
+    providers: [ContactService]
 })
 export class AppComponent {
+
+    constructor(private contactService: ContactService) {}
+
     title = 'Contact List';
     contacts: Contact[];
     selectedContact: Contact;
