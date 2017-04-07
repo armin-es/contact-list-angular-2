@@ -9,7 +9,6 @@ import { OnInit } from '@angular/core';
 @Component({
     selector: 'my-contacts',
     template: `
-        <h1 class="title">{{title}}</h1>
         <h2>My Contacts:</h2>
         <ul class="contacts">
             <li *ngFor="let contact of contacts"
@@ -72,7 +71,6 @@ import { OnInit } from '@angular/core';
             margin-right: .8em;
         }
     `],
-    providers: [ContactService]
 })
 export class ContactsComponent implements OnInit {
 
@@ -86,7 +84,6 @@ export class ContactsComponent implements OnInit {
         this.getContacts();
     }
 
-    title = 'Contact List';
     contacts: Contact[];
     selectedContact: Contact;
     onSelect(contact: Contact): void {
