@@ -8,10 +8,19 @@ import { ContactsComponent }  from './contacts.component';
 import { ContactDetailComponent } from './contact-detail.component';
 import { ContactService } from './contact.service';
 
+import { RouterModule } from '@angular/router';
+
+
 @NgModule({
-    imports:      [
+    imports: [
         BrowserModule,
-        FormsModule
+        FormsModule,
+        RouterModule.forRoot([
+            {
+                path: 'contacts',
+                component: ContactsComponent
+            }
+        ])
     ],
     declarations: [
         AppComponent,
