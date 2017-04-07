@@ -7,7 +7,7 @@ import { ContactService } from './contact.service';
 import { OnInit } from '@angular/core';
 
 @Component({
-    selector: 'my-app',
+    selector: 'my-contacts',
     template: `
         <h1 class="title">{{title}}</h1>
         <h2>My Contacts:</h2>
@@ -74,7 +74,7 @@ import { OnInit } from '@angular/core';
     `],
     providers: [ContactService]
 })
-export class AppComponent implements ngOnInit {
+export class ContactsComponent implements OnInit {
 
     constructor(private contactService: ContactService) {}
 
