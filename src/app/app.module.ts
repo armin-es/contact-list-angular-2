@@ -19,6 +19,10 @@ import { RouterModule } from '@angular/router';
             {
                 path: 'contacts',
                 component: ContactsComponent
+            },
+            {
+                path: 'detail/:id',
+                component: ContactDetailComponent
             }
         ])
     ],
